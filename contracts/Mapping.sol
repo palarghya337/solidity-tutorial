@@ -1,14 +1,9 @@
 pragma solidity 0.6.0;
 pragma experimental ABIEncoderV2;
 
-contract Mapping {
+import "./Employee.sol";
 
-    struct Employee {
-        
-        uint256 age;
-        int id;
-        string name;
-    }
+contract Mapping {
 
     Employee employee;
     mapping(int => Employee) public employeeMapping;

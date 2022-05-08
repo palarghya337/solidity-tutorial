@@ -1,14 +1,9 @@
 pragma solidity 0.6.0;
 pragma experimental ABIEncoderV2;
 
-contract ObjectCreation {
+import "./Employee.sol";
 
-    struct Employee {
-        
-        uint256 age;
-        int id;
-        string name;
-    }
+contract ObjectCreation {
 
     Employee employee;
 
