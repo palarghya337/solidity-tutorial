@@ -3,7 +3,7 @@ pragma solidity ^0.6.0;
 
 contract VariableScope {
 
-    Child ch = new Child();
+    Child private ch = new Child();
 
     function showInternalData() public view returns(string memory) {
         return ch.data();
