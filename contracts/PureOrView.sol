@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
+// To know more click https://docs.soliditylang.org/en/v0.6.12/contracts.html#view-functions
 contract PureOrView {
 
     string data;
