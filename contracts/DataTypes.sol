@@ -13,21 +13,38 @@ contract DataTypes {
     int intDataType;
     uint uintDataType;
     string stringDataType;
+    /*
+     * This method can accept only boolean data i.e. either true or false.
+     */
+    function boolDefaultValue(bool _boolData) internal {
+        boolDataType = _boolData;
+    }
+    /*
+     * This method can accept signed integer data.
+     */
+    function initDefaultValue(int _intDataType) internal {
+        intDataType = _intDataType;
+    }
+    /*
+     * This method can accept unsigned integer data types.
+     */
+    function uintDefaultValue(uint _uintDataType) internal {
+        uintDataType = _uintDataType;
+    }
+    /*
+     * This method can accept string data.
+     */
+    function stringDefaultValue(string memory _stringDataType) internal {
+        stringDataType = _stringDataType;
+    }
 
-    function boolDefaultValue() public view returns(bool) {
-        return boolDataType;
+    function init() public {
+        boolDefaultValue(true);
+        initDefaultValue(2**255 - 1);
+        uintDefaultValue(2**256 - 1);
+        stringDefaultValue("some data");
     }
-    function initDefaultValue() public view returns(int) {
-        return intDataType;
-    }
-    function uintDefaultValue() public view returns(uint) {
-        return uintDataType;
-    }
-    function stringDefaultValue() public view returns(string memory) {
-        return stringDataType;
-    }
-    function localVariableExample() public pure returns(string memory) {
-        string memory localVar = "Here is an example of local variable.";
-        return localVar;
+    function DataTypeExamples() public view returns(bool, int, uint, string memory) {
+        return (boolDataType, intDataType, uintDataType, stringDataType);
     }
 }
